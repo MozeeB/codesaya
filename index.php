@@ -1,16 +1,16 @@
 <html>
  <head>
- <Title>Registration Form</Title>
+ <Title>Form input data siswa</Title>
  </head>
  <body>
- <h1>Register here!</h1>
- <p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
+ <h1>Input data siswa disini!</h1>
+ <p>Isi dengan benar, lalu klik <strong>Submit</strong> untuk input data.</p>
  <form method="post" action="index.php" enctype="multipart/form-data" >
        Nama  <input type="text" name="nama" id="nama"/></br></br>
        Kelas <input type="text" name="kelas" id="kelas"/></br></br>
        Jurusan <input type="text" name="jurusan" id="jurusan"/></br></br>
        <input type="submit" name="submit" value="Submit" />
-       <input type="submit" name="load_data" value="Load Data" />
+       <input type="submit" name="load_data" value="Muat Data" />
  </form>
 
  <?php
@@ -48,14 +48,14 @@
         } catch(Exception $e) {
             echo "Failed: " . $e;
         }
-        echo "<h3>Your're registered!</h3>";
+        echo "<h3>Data berhasil diinput!</h3>";
     } else if (isset($_POST['load_data'])) {
         try {
             $sql_select = "SELECT * FROM dbo.cikup";
             $stmt = $conn->query($sql_select);
             $registrants = $stmt->fetchAll(); 
             if(count($registrants) > 0) {
-                echo "<h2>People who are registered:</h2>";
+                echo "<h2>List Data Siswa:</h2>";
                 echo "<table>";
                 echo "<tr><th>Nama</th>";
                 echo "<th>Kelas</th>";
@@ -70,7 +70,7 @@
                 }
                 echo "</table>";
             } else {
-                echo "<h3>No one is currently registered.</h3>";
+                echo "<h3>Tidak ada data yang diinput!.</h3>";
             }
         } catch(Exception $e) {
             echo "Failed: " . $e;
