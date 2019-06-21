@@ -34,13 +34,16 @@
             $nama = $_POST['nama'];
             $kelas = $_POST['kelas'];
             $jurusan = $_POST['jurusan'];
+            $date = date("Y-m-d");
+
             // Insert data
-            $sql_insert = "INSERT INTO cikup (nama, kelas, jurusan) 
-                        VALUES (?,?,?)";
+            $sql_insert = "INSERT INTO cikup (nama, kelas, jurusan, waktu) 
+                        VALUES (?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $nama);
             $stmt->bindValue(2, $kelas);
             $stmt->bindValue(3, $jurusan);
+            $stmt->bindValue(4, $date);
             $stmt->execute();
         } catch(Exception $e) {
             echo "Failed: " . $e;
@@ -57,10 +60,13 @@
                 echo "<tr><th>Nama</th>";
                 echo "<th>Kelas</th>";
                 echo "<th>Jurusan</th>";
+                echo "<th>Waktu</th></tr>";
+
                 foreach($registrants as $registrant) {
                     echo "<tr><td>".$registrant['nama']."</td>";
                     echo "<td>".$registrant['kelas']."</td>";
                     echo "<td>".$registrant['jurusan']."</td>";
+                    echo "<td>".$registrant['waktu']."</td></tr>";
                 }
                 echo "</table>";
             } else {
