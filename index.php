@@ -53,8 +53,8 @@
         try {
             $sql_select = "SELECT * FROM dbo.cikup";
             $stmt = $conn->query($sql_select);
-            $registrants = $stmt->fetchAll(); 
-            if(count($registrants) > 0) {
+            $siswa = $stmt->fetchAll(); 
+            if(count($siswa) > 0) {
                 echo "<h2>List Data Siswa:</h2>";
                 echo "<table>";
                 echo "<tr><th>Nama</th>";
@@ -62,11 +62,11 @@
                 echo "<th>Jurusan</th>";
                 echo "<th>Waktu</th></tr>";
 
-                foreach($registrants as $registrant) {
-                    echo "<tr><td>".$registrant['nama']."</td>";
-                    echo "<td>".$registrant['kelas']."</td>";
-                    echo "<td>".$registrant['jurusan']."</td>";
-                    echo "<td>".$registrant['waktu']."</td></tr>";
+                foreach($siswa as $siswa) {
+                    echo "<tr><td>".$siswa['nama']."</td>";
+                    echo "<td>".$siswa['kelas']."</td>";
+                    echo "<td>".$siswa['jurusan']."</td>";
+                    echo "<td>".$siswa['waktu']."</td></tr>";
                 }
                 echo "</table>";
             } else {
