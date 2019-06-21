@@ -15,21 +15,17 @@
 
  <?php
 
- // SQL Server Extension Sample Code:
- $connectionInfo = array("UID" => "mozeeb@cikupwebserver", "pwd" => "zeeb@123", "Database" => "cikupdb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
- $serverName = "tcp:cikupwebserver.database.windows.net,1433";
- $conn = sqlsrv_connect($serverName, $connectionInfo);
+ $host = "cikupwebserver.database.windows.net";
+    $user = "mozeeb";
+    $pass = "zeeb@123";
+    $db = "cikupdb";
 
- // PHP Data Objects(PDO) Sample Code:
-
- try {
-     $conn = new PDO("sqlsrv:server = tcp:cikupwebserver.database.windows.net,1433; Database = cikupdb", "mozeeb", "zeeb@123");
-     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
- }
- catch (PDOException $e) {
-     print("Error connecting to SQL Server.");
-     die(print_r($e));
- }
+    try {
+        $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
+        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    } catch(Exception $e) {
+        echo "Failed: " . $e;
+    }
  
  
  
