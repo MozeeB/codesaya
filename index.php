@@ -5,7 +5,7 @@
  <body>
  <h1>Register here!</h1>
  <p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
- <form method="post" action="index.html" enctype="multipart/form-data" >
+ <form method="post" action="index.php" enctype="multipart/form-data" >
        Nama  <input type="text" name="nama" id="nama"/></br></br>
        Kelas <input type="text" name="kelas" id="kelas"/></br></br>
        Jurusan <input type="text" name="jurusan" id="jurusan"/></br></br>
