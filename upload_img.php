@@ -39,17 +39,16 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 		<link href="starter-template.css" rel="stylesheet">
 		 <style>
        th {
-  	background-color:#707B7C; border-right:solid 1px black; border-bottom:solid 1px black; font-size:8pt ; padding:5px;font-family: arial;border-top: solid 1px black;border-left: solid 1px black;
+  	background-color:#1e90ff; border-right:solid 2px black; border-bottom:solid 2px black; font-size:8pt ; padding:5px;font-family: arial;border-top: solid 2px black;border-left: solid 2px black;
 	} 
 	td{
-		border-right:solid 1px black; border-bottom:solid 1px black; font-size:8pt ; padding:5px;font-family: arial;border-left: solid 1px black;border-top: solid 1px black; text-align: right;  
+		border-right:solid 2px black; border-bottom:solid 2px black; font-size:8pt ; padding:5px;font-family: arial;border-left: solid 2px black;border-top: solid 2px black; text-align: right;  
 	}
 </style>
 	</head>
 	
 	<body>
 
-			Image to analyze:
 					<form action="upload_img.php" method="post" enctype="multipart/form-data">
 						<input type="file" name="fileToUpload" accept=".jpeg,.jpg,.png" required="">
 						<input type="submit" name="submit" value="Upload">
@@ -58,8 +57,8 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 				<br>
 			<table>
 			<tr>
-				<th>File Name</th>
-				<th>URL</th>
+				<th>Nama File</th>
+				<th>URL Gambar</th>
 				<th>Action</th>
 			</tr>
 		
