@@ -32,19 +32,33 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<title>Analyze With Upload Photo</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
 		<!-- Bootstrap core CSS -->
 		<link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
 		<!-- Custom styles for this template -->
 		<link href="starter-template.css" rel="stylesheet">
 		 <style>
-       th {
-  	background-color:#1e90ff; border-right:solid 2px black; border-bottom:solid 2px black; font-size:8pt ; padding:5px;font-family: arial;border-top: solid 2px black;border-left: solid 2px black;
-	} 
-	td{
-		border-right:solid 2px black; border-bottom:solid 2px black; font-size:8pt ; padding:5px;font-family: arial;border-left: solid 2px black;border-top: solid 2px black; text-align: right;  
-	}
-</style>
+		 body{
+			 margin: 100px;
+		 }
+			th {
+			background-color:#1e90ff; border-right:solid 2px black; border-bottom:solid 2px black; font-size:8pt ; padding:5px;font-family: arial;border-top: solid 2px black;border-left: solid 2px black;
+			} 
+			td{
+				border-right:solid 2px black; border-bottom:solid 2px black; font-size:8pt ; padding:5px;font-family: arial;border-left: solid 2px black;border-top: solid 2px black; text-align: right;  
+			}
+	</style>
 	</head>
 	
 	<body>
@@ -55,13 +69,14 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 					</form>
 			
 				<br>
-			<table>
+			<table class="table">
+			<thead class="thead-light">
 			<tr>
 				<th>Nama File</th>
 				<th>URL Gambar</th>
 				<th>Action</th>
 			</tr>
-		
+			</thead>
 			<tbody>
 						<?php
 						do {
@@ -73,7 +88,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 							<td>
 								<form action="img_vision.php" method="post">
 									<input type="hidden" name="url" value="<?php echo $blob->getUrl()?>">						
-									<input type="submit" name="submit"  value="Lihat">
+									<input class="btn btn-info" type="submit" name="submit"  value="Lihat">
 								</form>
 							</td>
 						</tr>
