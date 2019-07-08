@@ -54,7 +54,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 	</head>
 	<body>
 		<form class= "form-inline" action="upload_img.php" method="post" enctype="multipart/form-data">
-			<input class="btn btn-warning" type="file" name="fileToUpload" accept=".jpeg,.jpg,.png" required="">
+			<input type="file" name="fileToUpload" accept=".jpeg,.jpg,.png" required="">
 			<input class="btn btn-primary mb-2" type="submit" name="submit" value="Upload">
 		</form>
 		<br>
