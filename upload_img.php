@@ -51,6 +51,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 		 <style>
 		 body{
 			 margin: 100px;
+			 font-size:18pt;
 		 }
 			/* th {
 			background-color:#1e90ff; border-right:solid 2px black; border-bottom:solid 2px black; font-size:8pt ; padding:5px;font-family: arial;border-top: solid 2px black;border-left: solid 2px black;
