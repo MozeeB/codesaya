@@ -52,12 +52,12 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 		 body{
 			 margin: 100px;
 		 }
-			th {
+			/* th {
 			background-color:#1e90ff; border-right:solid 2px black; border-bottom:solid 2px black; font-size:8pt ; padding:5px;font-family: arial;border-top: solid 2px black;border-left: solid 2px black;
 			} 
 			td{
 				border-right:solid 2px black; border-bottom:solid 2px black; font-size:8pt ; padding:5px;font-family: arial;border-left: solid 2px black;border-top: solid 2px black; text-align: right;  
-			}
+			} */
 	</style>
 	</head>
 	
